@@ -35,15 +35,21 @@ class sv_lightbox extends init {
 	}
 	protected function register_scripts(): sv_lightbox{
 		if($this->get_setting( 'activate' )->run_type()->get_data()) {
-			$this->get_script('lightbox')->set_path('lib/frontend/css/lightbox.min.css');
+			$this->get_script('lightbox')
+				->set_path('lib/frontend/css/lightbox.min.css')
+				->set_is_enqueued();
+
 			$this->get_script('lightbox_js')
 				->set_type('js')
 				->set_deps(array('jquery'))
-				->set_path('lib/frontend/js/lightbox.min.js');
-			$this->get_script('default')
+				->set_path('lib/frontend/js/lightbox.min.js')
+				->set_is_enqueued();
+
+			$this->get_script('default_js')
 				->set_type('js')
-				->set_deps(array('lightbox_js'))
-				->set_path('lib/frontend/js/default.js');
+				->set_deps(array($this->get_script('lightbox_js')->get_handle()))
+				->set_path('lib/frontend/js/default.js')
+				->set_is_enqueued();
 		}
 		return $this;
 	}
