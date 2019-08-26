@@ -14,7 +14,7 @@ namespace sv100;
 class sv_lightbox extends init {
 	public function init() {
 		// Module Info
-		$this->set_module_title( 'SV Lightbox' );
+		$this->set_module_title( __( 'SV Lightbox', 'sv100' ) );
 		$this->set_module_desc( __( 'Links to Images will be opened as Lightbox', 'sv100' ) );
 
 		// Section Info
