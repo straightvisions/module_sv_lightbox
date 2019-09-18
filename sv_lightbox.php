@@ -18,7 +18,7 @@ class sv_lightbox extends init {
 		$this->set_module_desc( __( 'Links to Images will be opened as Lightbox', 'sv100' ) );
 
 		// Section Info
-		$this->set_section_title( __( 'Lighhtbox', 'sv100' ) );
+		$this->set_section_title( __( 'Lightbox', 'sv100' ) );
 		$this->set_section_desc( __( 'Manage Lightbox', 'sv100' ) );
 		$this->set_section_type( 'settings' );
 		$this->get_root()->add_section( $this );
