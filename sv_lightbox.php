@@ -23,8 +23,8 @@ class sv_lightbox extends modules {
 	}
 	public function load_settings(): sv_lightbox {
 		$this->get_setting( 'activate' )
-				->set_title( __( 'Enable Lightbox', 'sv100' ) )
-				->set_description( __( 'Links to Images will be opened in a Lightbox', 'sv100' ) )
+				->set_title( __( 'Enable Lightbox', 'sv100_companion' ) )
+				->set_description( __( 'Links to Images will be opened in a Lightbox', 'sv100_companion' ) )
 				->load_type( 'checkbox' );
 
 		return $this;
