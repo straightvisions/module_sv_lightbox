@@ -1,5 +1,5 @@
 <?php
-namespace sv100;
+namespace sv100_companion;
 
 /**
  * @version         4.000
@@ -11,17 +11,13 @@ namespace sv100;
  * @license			See license.txt or https://straightvisions.com
  */
 
-class sv_lightbox extends init {
+class sv_lightbox extends modules {
 	public function init() {
-		// Module Info
-		$this->set_module_title( __( 'SV Lightbox', 'sv100' ) );
-		$this->set_module_desc( __( 'Links to Images will be opened as Lightbox', 'sv100' ) );
-
 		// Section Info
-		$this->set_section_title( __( 'Lightbox', 'sv100' ) );
-		$this->set_section_desc( __( 'Manage Lightbox', 'sv100' ) );
-		$this->set_section_type( 'settings' );
-		$this->get_root()->add_section( $this );
+		$this->set_section_title( __( 'Lightbox', 'sv100_companion' ) )
+		->set_section_desc( __( 'Manage Lightbox', 'sv100_companion' ) )
+		->set_section_type( 'settings' )
+		->get_root()->add_section( $this );
 
 		$this->load_settings()->register_scripts();
 	}
