@@ -30,7 +30,7 @@ class sv_lightbox extends modules {
 		return $this;
 	}
 	protected function register_scripts(): sv_lightbox{
-		if($this->get_setting( 'activate' )->run_type()->get_data()) {
+		if($this->get_setting( 'activate' )->get_data()) {
 			$this->get_script('lightbox')
 				->set_path('lib/frontend/css/lightbox.min.css')
 				->set_is_enqueued();
