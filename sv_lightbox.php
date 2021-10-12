@@ -32,13 +32,12 @@ class sv_lightbox extends modules {
 	protected function register_scripts(): sv_lightbox{
 		if($this->get_setting( 'activate' )->get_data()) {
 			$this->get_script('lightbox')
-				->set_path('lib/frontend/css/lity.min.css')
+				->set_path('lib/frontend/css/basicLightbox.min.css')
 				->set_is_enqueued();
 
 			$this->get_script('lightbox_js')
 				->set_type('js')
-				->set_deps(array('jquery'))
-				->set_path('lib/frontend/js/lity.min.js')
+				->set_path('lib/frontend/js/basicLightbox.min.js')
 				->set_is_enqueued();
 
 			$this->get_script('default_js')
